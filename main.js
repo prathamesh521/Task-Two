@@ -1,12 +1,7 @@
 const fill = document.querySelector(".fill")
 const empties = document.querySelectorAll(".box")
 
-//listeners
-// var array = Array.from(fill);
-// array.forEach(e => {
-//     e.addEventListener("dragstart", dragStart)
-//     e.addEventListener("dragend", dragEnd)
-// });
+
 
 fill.addEventListener("dragstart", dragStart)
 fill.addEventListener("dragend", dragEnd)
@@ -33,12 +28,11 @@ function dragEnter(e){
 }
 function dragLeave(){
     this.className = "box"
-    removeData(this.index)
+    removeData()
 }
 function dragDrop(){
     this.className = "box";
     this.className += " filled"
-    // this.append(fill);
     storeData()
 }
 
